@@ -1,0 +1,39 @@
+<form (ngSubmit) = "submit()" #formUser = "ngForm">
+    <div class="form-group">
+        <label for="txtNames">Nombres</label>
+        <input type="text" class="form-control" id="txtNames" [(ngModel)]="formData.names" name="names" #names="ngModel"/>
+    </div>
+    <div class="form-group">
+        <label for="txtSurNames">Apellidos</label>
+        <input type="text" class="form-control" id="txtSurNames" [(ngModel)]="formData.surnames" name="surnames" #surnames="ngModel"/>
+    </div>
+    <div class="form-group">
+        <label for="rdbGenre">F</label>
+        <input type="radio" class="form-control" id="rdbGenre" value="F" name="genre" [(ngModel)]="formData.genre" name="genre" #genre="ngModel"/>
+        <label for="rdbGenre">M</label>
+        <input type="radio" class="form-control" id="rdbGenre" value="M" name="genre" [(ngModel)]="formData.genre" name="genre" #genre="ngModel"/>
+    </div>
+    <div class="form-group">
+        <label for="txtDocument">Cédula</label>
+        <input type="text" class="form-control" id="txtDocument" [(ngModel)]="formData.document" name="document" #document="ngModel"/>
+    </div>
+    <div class="form-group">
+        <label for="dtBirthday">Fecha nacimiento</label>
+        <input type="date" class="form-control" id="dtBirthday" [(ngModel)]="formData.birthday" name="birthday" #birthday="ngModel"/>
+    </div>
+    <div class="form-group">
+        <label for="slcDepartment">Departamento</label>
+        <select id="slcDepartment" [(ngModel)]="formData.department" name="department" #department="ngModel"></select>
+    </div>
+    <div class="form-group">
+        <label for="txtPosition">Posición</label>
+        <input type="text" class="form-control" id="txtPosition" [(ngModel)]="formData.position" name="position" #position="ngModel"/>
+    </div>
+    <div class="form-group">
+        <label for="txtSupervisor">Supervisor</label>
+        <input type="text" class="form-control" id="txtSupervisor" [(ngModel)]="formData.supervisor" name="supervisor" #supervisor="ngModel"/>
+    </div>    
+    <div>
+        <input type="submit" value="Registrar" />
+    </div>
+</form>
